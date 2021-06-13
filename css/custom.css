@@ -9,7 +9,6 @@ body {
 }
 textarea {
     resize: none!important;
-    width: 15rem!important;
     height: 10rem!important;
 }
 .form-outline .form-control.disabled, .form-outline .form-control:disabled, .form-outline .form-control[readonly] {
