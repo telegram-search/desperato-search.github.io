@@ -1,0 +1,17 @@
+body {
+    background-color: #1e1e1e!important;
+}
+.form-label {
+    color: white!important;
+}
+#textAreaChats {
+    color: #f6f2f196!important;
+}
+textarea {
+    resize: none!important;
+    width: 15rem!important;
+    height: 10rem!important;
+}
+.form-outline .form-control.disabled, .form-outline .form-control:disabled, .form-outline .form-control[readonly] {
+    background-color: #e9ecef14!important;
+}
