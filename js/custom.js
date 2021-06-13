@@ -1,9 +1,6 @@
 function startSearch () {
     document.getElementById('textAreaChats').disabled = true;
-    document.getElementById('search-button').value = "1"
-    document.getElementById('search-button').disabled = false;
+    document.getElementById('search-button').disabled = true;
+    document.getElementById('search-loading').removeAttribute("hidden");
+    document.getElementById('search-text-label-ru').innerText = "";
 }
-
-document.getElementById('search-button').onclick = function() {
-    // alert("button was clicked");
-};

@@ -15,3 +15,6 @@ textarea {
 .form-outline .form-control.disabled, .form-outline .form-control:disabled, .form-outline .form-control[readonly] {
     background-color: #e9ecef14!important;
 }
+#search-loading {
+    margin-top: 3px!important;
+}
