@@ -9,11 +9,15 @@ body {
 }
 textarea {
     resize: none!important;
-    height: 10rem!important;
+    height: 13.5rem!important;
 }
 .form-outline .form-control.disabled, .form-outline .form-control:disabled, .form-outline .form-control[readonly] {
     background-color: #e9ecef14!important;
 }
 #search-loading {
     margin-top: 3px!important;
+}
+
+.chats-count {
+    font-size: 15px!important;
 }

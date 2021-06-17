@@ -21,58 +21,143 @@
     <div class="container-fluid">
       <div class="justify-content-center align-items-center mt-1" style="height: 100vh;">
         <div class="text-center">
-          <div class="row">
-            <div class="col-md-8 mt-3">
-              <div class="card text-white bg-dark">
-                <div class="card-header">Параметры поиска</div>
-                <div class="card-body text-center pt-0">
-                  <p class="card-text">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div>Только RU</div>
-                          <label class="toggle-switchy" data-text="false" data-size="md">
-                            <input checked type="checkbox">
+          <form action="#" class="searchFormData">
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                  <div class="card text-white bg-dark">
+                    <div class="card-header">Быстрый поиск по категориям</div>
+                    <div class="card-body text-center pt-0" style="font-size: 14px;">
+                      <p class="card-text">
+                      <div class="row categories-list">
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Работа</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="workChats" onClick="categorySearch('workChats')">
+                            <span class="toggle">
+                                  <span class="switch"></span>
+                              </span>
+                          </label>
+                        </div>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Общение</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm" >
+                            <input type="checkbox" value="0" id="speakChats" onClick="categorySearch('speakChats')">
                             <span class="toggle">
                                 <span class="switch"></span>
                             </span>
                           </label>
                         </div>
-                      <div class="col-md-4">
-                        <div>Только EN</div>
-                        <label class="toggle-switchy" data-text="false" data-size="md" disabled>
-                          <input checked type="checkbox">
-                          <span class="toggle">
-                              <span class="switch"></span>
-                          </span>
-                        </label>
-                      </div>
-                      <div class="col-md-4">
-                        <div>Прямой поиск</div>
-                        <label class="toggle-switchy" data-text="false" data-size="md" data-label="left">
-                          <input checked type="checkbox">
-                          <span class="toggle">
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Знакомства</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="datingRuChats" onClick="categorySearch('datingRuChats')">
+                            <span class="toggle">
+                                    <span class="switch"></span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>18+</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="adultChats" onClick="categorySearch('adultChats')">
+                            <span class="toggle">
+                                      <span class="switch"></span>
+                              </span>
+                          </label>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Арбитраж</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="arbitChats" onClick="categorySearch('arbitChats')">
+                            <span class="toggle">
+                                    <span class="switch"></span>
+                              </span>
+                          </label>
+                        </div>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Барахолка</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="pawnShopChats" onClick="categorySearch('pawnShopChats')">
+                            <span class="toggle">
                                   <span class="switch"></span>
-                          </span>
-                        </label>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Crypto</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="cryptoChats" onClick="categorySearch('cryptoChats')">
+                            <span class="toggle">
+                                  <span class="switch"></span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="col-md-3 сol-sm-3">
+                          <div>Invest</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input type="checkbox" value="0" id="investChats" onClick="categorySearch('investChats')">
+                            <span class="toggle">
+                                    <span class="switch"></span>
+                              </span>
+                          </label>
+                        </div>
                       </div>
+                      </p>
                     </div>
-                  </p>
+                  </div>
                 </div>
-              </div>
+                <div class="col-md-4 mt-3">
+                  <div class="form-outline mb-5">
+                    <textarea class="form-control" id="textAreaChats" rows="4"></textarea>
+                    <label class="form-label" for="textAreaChats">Список ключей</label>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <div class="card text-white bg-dark mb-2">
+                    <div class="card-header">Всего чатов<span class="badge bg-danger ms-2 chats-count">64 283</span></div>
+                  </div>
+                  <div class="card text-white bg-dark">
+                    <div class="card-header">Параметры поиска</div>
+                    <div class="card-body text-center pt-0">
+                      <p class="card-text">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                          <div>Только RU</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input checked id="ruChats" type="checkbox" onClick="checkLanguageSettings('ru')">
+                            <span class="toggle"><span class="switch"></span></span>
+                          </label>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                          <div>Только EN</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm">
+                            <input disabled id="enChats" type="checkbox" onClick="checkLanguageSettings('en')">
+                            <span class="toggle"><span class="switch"></span></span>
+                          </label>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                          <div>Прямой поиск</div>
+                          <label class="toggle-switchy" data-text="false" data-size="sm" data-label="left">
+                            <input type="checkbox" id="directSearch">
+                            <span class="toggle">
+                                <span class="switch"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-2">
+                  <button type="button" id="search-button" onclick="startSearch()" class="btn btn-lg btn-primary">
+                    <span id="search-text-label-ru">Поиск чатов</span>
+                    <div class="spinner-border spinner-border-sm" id="search-loading" role="status" hidden></div>
+                  </button>
+                </div>
             </div>
-            <div class="col-md-4 mt-3">
-              <div class="form-outline mb-5">
-                <textarea class="form-control" id="textAreaChats" rows="4"></textarea>
-                <label class="form-label" for="textAreaChats">Список ключей</label>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <button type="button" id="search-button" onclick="startSearch()" class="btn btn-lg btn-primary">
-                <span id="search-text-label-ru">Поиск чатов</span>
-                <div class="spinner-border spinner-border-sm" id="search-loading" role="status" hidden></div>
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -80,6 +165,7 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/switchers.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript"></script>
   </body>
