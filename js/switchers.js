@@ -9,6 +9,7 @@ function categorySearch(chatsCategory) {
         document.getElementById('textAreaChats').disabled = false;
         if(getActiveOptions() === 0) {
             document.getElementById('textAreaChats').disabled = false;
+            enableConfig();
         } else {
             document.getElementById('textAreaChats').disabled = true;
         }
@@ -19,6 +20,7 @@ function categorySearch(chatsCategory) {
         document.getElementById(chatsCategory).checked = false
         if(getActiveOptions() === 0) {
             document.getElementById('textAreaChats').disabled = false;
+            enableConfig();
         } else {
             document.getElementById('textAreaChats').disabled = true;
         }
@@ -26,10 +28,11 @@ function categorySearch(chatsCategory) {
 }
 
 function disableConfig() {
-    document.getElementById('textAreaChats').disabled = true;
-    document.getElementById('ruChats').disabled = true;
-    document.getElementById('enChats').disabled = true;
-    document.getElementById('directSearch').disabled = true;
+    document.getElementById('options-container').classList.add("disable-options")
+}
+
+function enableConfig() {
+    document.getElementById('options-container').classList.remove("disable-options")
 }
 
 function getActiveOptions() {

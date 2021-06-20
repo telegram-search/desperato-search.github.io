@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <title>Telegram Search | Chats</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/toggle-switchy.css">
@@ -108,7 +108,7 @@
                   </div>
                 </div>
                 <div class="col-md-4 mt-3">
-                  <div class="form-outline mb-5">
+                  <div class="form-outline">
                     <textarea class="form-control" id="textAreaChats" rows="4"></textarea>
                     <label class="form-label" for="textAreaChats">Список ключей</label>
                   </div>
@@ -118,39 +118,41 @@
                     <div class="card-header">Всего чатов<span class="badge bg-danger ms-2 chats-count">64 283</span></div>
                   </div>
                   <div class="card text-white bg-dark">
-                    <div class="card-header">Параметры поиска</div>
-                    <div class="card-body text-center pt-0">
-                      <p class="card-text">
-                      <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                          <div>Только RU</div>
-                          <label class="toggle-switchy" data-text="false" data-size="sm">
-                            <input checked id="ruChats" type="checkbox" onClick="checkLanguageSettings('ru')">
-                            <span class="toggle"><span class="switch"></span></span>
-                          </label>
+                    <span id="options-container">
+                      <div class="card-header">Параметры поиска</div>
+                      <div class="card-body text-center pt-0">
+                        <p class="card-text">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4">
+                            <div>Только RU</div>
+                            <label class="toggle-switchy" data-text="false" data-size="sm">
+                              <input checked id="ruChats" type="checkbox" onClick="checkLanguageSettings('ru')">
+                              <span class="toggle"><span class="switch"></span></span>
+                            </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <div>Только EN</div>
+                            <label class="toggle-switchy" data-text="false" data-size="sm">
+                              <input disabled id="enChats" type="checkbox" onClick="checkLanguageSettings('en')">
+                              <span class="toggle"><span class="switch"></span></span>
+                            </label>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <div>Прямой поиск</div>
+                            <label class="toggle-switchy" data-text="false" data-size="sm" data-label="left">
+                              <input type="checkbox" id="directSearch">
+                              <span class="toggle">
+                                  <span class="switch"></span>
+                              </span>
+                            </label>
+                          </div>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                          <div>Только EN</div>
-                          <label class="toggle-switchy" data-text="false" data-size="sm">
-                            <input disabled id="enChats" type="checkbox" onClick="checkLanguageSettings('en')">
-                            <span class="toggle"><span class="switch"></span></span>
-                          </label>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                          <div>Прямой поиск</div>
-                          <label class="toggle-switchy" data-text="false" data-size="sm" data-label="left">
-                            <input type="checkbox" id="directSearch">
-                            <span class="toggle">
-                                <span class="switch"></span>
-                            </span>
-                          </label>
-                        </div>
+                        </p>
                       </div>
-                      </p>
-                    </div>
+                    </span>
                   </div>
                 </div>
-                <div class="col-md-12 mt-2">
+                <div class="col-md-12 mt-5 mb-5">
                   <button type="button" id="search-button" onclick="startSearch()" class="btn btn-lg btn-primary">
                     <span id="search-text-label-ru">Поиск чатов</span>
                     <div class="spinner-border spinner-border-sm" id="search-loading" role="status" hidden></div>

@@ -21,3 +21,8 @@ textarea {
 .chats-count {
     font-size: 15px!important;
 }
+
+.disable-options {
+    pointer-events: none;
+    opacity: 0.5;
+}
