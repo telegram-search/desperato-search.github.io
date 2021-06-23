@@ -1,3 +1,8 @@
+function access() {
+
+    return false;
+}
+
 function startSearch () {
     if (!checkTextAreaEmpty() || document.getElementById('textAreaChats').disabled === true) {
         document.getElementById('textAreaChats').disabled = true;

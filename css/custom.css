@@ -1,6 +1,15 @@
 body {
     background-color: #1e1e1e!important;
 }
+.access-granted {
+    display: none;
+}
+
+.access-not-granted {
+    background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+    height: 100vh;
+}
+
 .form-label {
     color: white!important;
 }
