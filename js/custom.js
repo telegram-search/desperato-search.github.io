@@ -4,6 +4,8 @@ function startSearch () {
         document.getElementById('search-button').disabled = true;
         document.getElementById('search-loading').removeAttribute("hidden");
         document.getElementById('search-text-label-ru').innerText = "";
+        document.getElementById('options-container-1').classList.add("disable-options")
+        document.getElementById('options-container-2').classList.add("disable-options")
         sendSearchData()
     }
 }
@@ -34,12 +36,9 @@ function checkLanguageSettings (lang) {
 }
 
 function checkTextAreaEmpty () {
-    if(document.getElementById("textAreaChats").value.replace(/\s+/g, ' ').trim() == '') {
-        return true
-    }
-    return false;
+    return document.getElementById("textAreaChats").value.replace(/\s+/g, ' ').trim() === '';
 }
 
 function sendSearchData () {
-    console.log(document.getElementById('searchFormData'));
+    console.log(document.getElementsByClassName('searchFormData'));
 }

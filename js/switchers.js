@@ -28,11 +28,11 @@ function categorySearch(chatsCategory) {
 }
 
 function disableConfig() {
-    document.getElementById('options-container').classList.add("disable-options")
+    document.getElementById('options-container-2').classList.add("disable-options")
 }
 
 function enableConfig() {
-    document.getElementById('options-container').classList.remove("disable-options")
+    document.getElementById('options-container-2').classList.remove("disable-options")
 }
 
 function getActiveOptions() {
